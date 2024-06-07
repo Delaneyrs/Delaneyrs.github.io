@@ -7,14 +7,15 @@
     
     <link rel="stylesheet" href="ica/ica3-part2/style.css">
     <style>
-         body {
+           body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #00FF00; 
+            background-color: #00FF00;
+            box-sizing: border-box; 
         }
 
-        .header-wrapper, footer {
+        .header-wrapper, .footer-wrapper {
             background-color: #25a125;
             padding: 20px;
             width: 100%;
@@ -60,17 +61,20 @@
 
         .main-content, .sidebar {
             flex: 1;
-            background-color: #25a125; 
+            background-color: #25a125;
             padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .main-content {
             border-bottom: 2px solid grey;
+            box-sizing: border-box;
         }
 
         .sidebar {
             margin-left: 20px;
+            border-bottom: 2px solid grey;
+        }
+
+        .sidebar hr {
+            border-top: 2px solid grey;
+            margin-top: 20px; 
         }
 
         footer {
