@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birdwatching</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700" rel="stylesheet">
+    <!-- Provided CSS link -->
+    <link rel="stylesheet" href="ica/ica3-part2/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #00FF00;
+        }
+
+        header, footer {
+            background-color: #25a125;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .main-content, .sidebar {
+            flex: 1;
+            background-color: #25a125; 
+            padding: 20px;
+            border-bottom: 10px solid grey; 
+        }
+
+        .sidebar {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+        }
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-title img {
+            margin-right: 20px;
+        }
+        .sidebar h2 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <header class="header-wrapper">
+            <div class="logo-title">
+                <img src="ica/ica3-part2/dove.png">
+                <h1><strong>BirdWatching</strong></h1>
+            </div>
+            
+            <nav class="nav-wrapper">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#get started">GET STARTED</a></li>
+                    <li><a href="#photos">PHOTOS</a></li>
+                    <li><a href="#gear">GEAR</a></li>
+                    <li><a href="#forum">FORUM</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        
+        <main class="main-content-wrapper">
+           
+            <div class="main-content">
+                <h2><strong>WELCOME</strong></h2>
+                <p>Welcome to the bird watching forum. We love birds. Did you know that birds fly, and sometimes they don't. isn't that funny? <em>silly, silly, little birds.</em> Wow, I love birds. If you're here so do you.</p>
+                <p>Despite what you may have heard, birds are not spy cameras...<em>or are they...</em> hmmmm. </p>
+            </div>
+
+            
+            <aside class="sidebar">
+                <h2>Favorite Photos</h2>
+                <div class="image-grid">
+                    <a href="favorite-1.jpg"><img src="favorite-1_th.jpg" alt="Small black bird, black claws, long black slender beak, links to larger version of the image"></a>
+                    <a href="favorite-2.jpg"><img src="favorite-2_th.jpg" alt="Top half of a pretty bird with bright blue plumage on neck, light colored beak, blue headdress, links to larger version of the image"></a>
+                    <a href="favorite-3.jpg"><img src="favorite-3_th.jpg" alt="Top half of a large bird with white plumage, very long curved narrow light colored break, links to larger version of the image"></a>
+                    <a href="favorite-4.jpg"><img src="favorite-4_th.jpg" alt="Large bird, mostly white plumage with black plumage on back and rear, long straight white beak, links to larger version of the image"></a>
+                </div>
+            </aside>
+        </main>
+
+        
+        <footer class="footer-wrapper">
+            <p>&copy; 2024 Bird Watching. Do not steal or else birds will come and peck you to death. you have been warned</p>
+            <p>Site by Delaney Schlegel</p>
+            <p><a href="http://game-icons.net/lorc/originals/dove.html">Dove icon</a> by Lorc.</p>
+        </footer>
+    </div>
+</body>
+</html>
 
