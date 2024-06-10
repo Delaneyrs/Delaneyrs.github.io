@@ -1,15 +1,15 @@
-<html>
+
+<!DOCTYPE html> <!--1-->
+<html lang="en"> <!--2-->
 <head>
-    
-    <html language="en">
-    
     <title>Error-Filled Page</title>
-    
+</head> <!--3-->
+
 <body>
-    <h1>Welcome to My Error-Filled Page
-    
-    This is a paragraph with mismatched tags and missing closing tags.</p>
-    
+    <h1>Welcome to My Error-Filled Page</h1> <!--4-->
+
+    <p>This is a paragraph with mismatched tags and missing closing tags.</p> <!--5-->
+
     <ol>
         <li>Item 1</li>
         <li>Item 2</li>
@@ -21,13 +21,13 @@
         <li>Item 8</li>
         <li>Item 9</li>
         <li>Item 10</li>
-    </ul>
+    </ol> <!--6 -->
 
-    <p>This is another paragraph without proper indentation.
-    
-    <img src="image.jpg">
+    <p>This is another paragraph without proper indentation.</p> <!-- 7-->
 
-    <a href="https://www.example.com" target="_blank">Click me!</img>
+    <img src="image.jpg" > 
+
+    <a href="https://www.example.com" target="_blank">Click me!</a> <!-- 8 -->
 
     <table>
         <tr>
@@ -36,30 +36,54 @@
         </tr>
         <tr>
             <td>John</td>
-            <td>25<td>
+            <td>25</td> <!--9 -->
         </tr>
         <tr>
             <td>Jane</td>
             <td>30</td>
         </tr>
+    </table> <!--10-->
     
-    <img source="error.jpeg" alt="Error Image">
+    <img src="error.jpeg" alt="Error Image"> <!--11 -->
 
-    <center>This is centered text.</center>
+    <p> style="text-align: center;">This is centered text.</p> <!--12,13 -->
 
-    <p bgcolor="lightgray">Text</p>
+    <p> style="background-color: lightgray;">Text</p> <!--14 -->
 
-    <input type="button" value="Click me">
+    <input type="button" value="Click me"> 
 
-    <!-- This is an unclosed comment
+    <!-- This is an unclosed comment --> <!--15 -->
 
-    <a href="#">Link without closing tag
+    <a href="#">Link without closing tag</a> <!-- 16 -->
 
-    <p><em>Underlined text</p></em>
+    <p><em>Underlined text</em></p> <!-- 17 -->
 
     <dl>
-        <li>Descriptive Item Title</li>
-        <li>Descriptive Item Text</li>
+        <dt>Descriptive Item Title</dt> <!-- 18-->
+        <dd>Descriptive Item Text</dd> <!-- 19-->
     </dl>
 </body>
-</html>
+</html> <!-- 20 -->
+
+<ol>
+    <li>1: doctype was missing </li>
+    <li>2: language was changed to lang </li>
+    <li>3: closing </head> tag was missing </li>
+    <li>4: closing <h1> tag was missing </li>
+    <li>5: closing </p> tag was missing </li>
+    <li>6: </ul> was changed to </ol> to match the opening tag</li>
+    <li>7: closing </p> tag was missing </li>
+    <li>8: </img> was changed to </a> to close the <a> tag since its before </img> </li>
+    <li>9: closing </td> tag was missing </li>
+    <li>10: closing </table> tag was missing </li>
+    <li>11: changed "source" to "src" in <img> </li>
+    <li>12: changed from <center> to <p> style="text-align: center;"> </li>
+    <li>13: closed the <p> tag </li>
+    <li>14: replaced "bgcolor" with background-color </li>
+    <li>15: closed the unclosed comment </li>
+    <li>16: closed </a> tag </li>
+    <li>17: changed the order of </em> and </p> </li>
+    <li>18: changed <li> to <dt> </li>
+    <li>19: changed <li> to <dd> </li>
+    <li>20: added missing </html> </li>
+</ol>
