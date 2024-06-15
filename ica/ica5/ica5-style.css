@@ -25,9 +25,10 @@
           url('bottom-image.png'),
           linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 100%);
         background-position:
-          top middle,
-          bottom middle;
+          top left,
+          bottom left;
         background-repeat: no-repeat;
+        background-size: 100% 50%, 100% 50%; 
         background-attachment: local; 
       }
       
