@@ -17,17 +17,17 @@
     margin: 20px auto;
     position: relative;
     background-color: white;
-    border-top: 1mm solid #999; 
-    border-bottom: 1mm solid #999; 
+    border-top: 1mm solid #999;
+    border-bottom: 1mm solid #999;
     background-image:
       url('top-image.png'),
-      url('bottom-image.png'), 
-      linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%); 
+      url('bottom-image.png'),
+      linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.3) 100%);
     background-position:
       top left,
       bottom left;
     background-repeat: no-repeat;
-    background-size: auto 80px, auto 80px; 
+    background-size: auto 80px, auto 80px;
   }
   
   h1 {
