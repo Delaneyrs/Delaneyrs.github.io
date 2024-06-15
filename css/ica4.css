@@ -1,5 +1,4 @@
 
-
 body {
     background-color: #fff;
     color: #333;
@@ -28,14 +27,29 @@ body {
   }
   
   
+  ul {
+    background-color: #eeeeee; 
+    border: 5px solid purple; 
+    padding: 10px;
+    list-style-type: none;
+    margin: 0; 
+    padding-left: 20px; 
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  
   a:link,
   a:visited {
-    color: #fb6542; 
+    color: #fb6542;
   }
   
   a:hover {
-    color: green;
+    color: green; 
     text-decoration: none; 
   }
+  
   
 
