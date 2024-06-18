@@ -29,6 +29,7 @@ body {
     justify-content: space-between;
     padding: 10px;
     box-sizing: border-box;
+    background-color: bisque;
 }
 
 .overlay {
@@ -56,6 +57,7 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+    background-color: bisque;
 }
 
 .team-info h1 {
