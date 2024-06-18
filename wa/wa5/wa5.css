@@ -7,6 +7,7 @@ body {
     height: 100vh;
     background-color: #000;
 }
+
 .container {
     position: relative;
     width: 80%;
@@ -18,39 +19,60 @@ body {
     height: auto;
     display: block;
 }
-.overlay {
+
+.top-banner {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.overlay {
     color: #fff;
     font-family: Arial, sans-serif;
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.7);
 }
+
+.overlay.top-left, .overlay.top-right {
+    flex: 1;
+}
+
 .overlay.top-left {
-    top: 10px;
-    left: 10px;
+    margin-right: 10px;
 }
+
 .overlay.top-right {
-    top: 10px;
-    right: 10px;
+    margin-left: 10px;
 }
+
 .overlay.bottom-center {
+    position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
+
 .team-info h1 {
     margin: 0;
     font-size: 20px;
     color: #00aaff;
 }
+
 .team-info p {
     margin: 5px 0;
     font-size: 16px;
 }
+
 .game-info p {
     margin: 5px 0;
     font-size: 18px;
     text-align: center;
 }
+
 
