@@ -1,3 +1,4 @@
+
 body {
   background-color: #fff;
   color: #333;
@@ -5,11 +6,6 @@ body {
   font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
 
 .logo {
   font-size: 200%;
@@ -17,14 +13,6 @@ img {
   text-align: center;
 }
 
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 980px;
-  padding: 0 20px;
-}
 
 nav {
   background-color: #000;
@@ -47,6 +35,17 @@ nav a {
   padding: .5em 1em;
 }
 
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 20px;
+}
+
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -63,9 +62,10 @@ aside {
   margin-bottom: 20px;
 }
 
+/* Photos grid */
 .photos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
 }
 
@@ -73,8 +73,9 @@ aside {
   width: 100%;
   height: auto;
 }
+
+
 @media screen and (max-width: 500px) {
-  .grid,
   main,
   article,
   aside {
@@ -85,3 +86,5 @@ aside {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
