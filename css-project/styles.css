@@ -1,14 +1,16 @@
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-color: #3f3d35; 
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
 }
 
@@ -18,90 +20,86 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #333;
+    font-size: 2em;
+    margin: 10px 0;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-section.concert {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+section {
+    margin-bottom: 40px;
+    background-color: #fff; 
     padding: 20px;
-    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
-section.concert h2 {
-    color: #333;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+.introduction {
+    text-align: center; 
+    margin-bottom: 40px; 
 }
 
-section.concert p.date {
+.concert h2 {
+    color: #333; 
+}
+
+.concert .date {
     font-style: italic;
-    color: #666;
-    margin-bottom: 15px;
+    color: #666; 
 }
 
-section.concert .concert-info {
+.concert-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 15px;
 }
 
-section.concert .concert-info img {
-    width: 150px;
-    height: auto;
+.concert-info img {
+    flex: 0 0 200px; 
     margin-right: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-section.concert .concert-info p {
-    margin-bottom: 15px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); 
 }
 
 .featured-artists {
-    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .featured-artists h3 {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 5px;
+    color: #333;
 }
 
 .featured-artists ul {
-    list-style-type: none;
-}
-
-.featured-artists li {
-    margin-bottom: 5px;
-}
-
-.featured-artists a {
-    color: #007bff;
-    text-decoration: none;
+    padding-left: 20px;
+    list-style: none;
 }
 
 .repertoire {
-    margin-bottom: 15px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .repertoire h3 {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 5px;
+    color: #333; 
+    margin-top: 0;
 }
 
-.repertoire ul.repertoire-list {
+.repertoire-list {
     list-style-type: none;
+    padding-left: 20px;
 }
 
-.repertoire ul.repertoire-list li {
+.repertoire-list li {
+    font-size: 0.95em;
     margin-bottom: 5px;
+    line-height: 1.6;
+    color: #8d7357; 
 }
+
+
+@media (max-width: 600px) {
+    .concert-info img {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+}
+
