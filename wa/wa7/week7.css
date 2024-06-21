@@ -2,8 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
-    height: 100vh; 
     background-color: blanchedalmond;
     font-family: 'Impact', sans-serif;
 }
@@ -37,17 +35,20 @@ img:hover {
     height: 20px;
     border-radius: 50%;
     position: absolute;
-    left: 50%; 
-    transform: translateX(-50%); 
-    top: 50%; 
-    transform: translateY(-50%); 
+    left: 5vw;
+    top: 0;
     transition: transform 0.3s ease-in-out;
 }
 
 #red-ball:hover {
-    transform: translate(100px, -50%);
+    transform: translateX(100px);
 }
 
 h1 {
     font-family: 'Impact', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
 }
