@@ -1,1 +1,94 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section.concert {
+    background-color: #fff;
+    border: 1px solid #5f5445;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section.concert h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+section.concert p.date {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+section.concert p {
+    margin-bottom: 15px;
+}
+
+.featured-artists {
+    margin-bottom: 15px;
+}
+
+.featured-artists h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.featured-artists ul {
+    list-style-type: none;
+}
+
+.featured-artists li {
+    margin-bottom: 5px;
+}
+
+.featured-artists a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.repertoire {
+    margin-bottom: 15px;
+}
+
+.repertoire h3 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.repertoire ul.repertoire-list {
+    list-style-type: none;
+}
+
+.repertoire ul.repertoire-list li {
+    margin-bottom: 5px;
+}
 
