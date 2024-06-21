@@ -1,36 +1,52 @@
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: blanchedalmond;
+    font-family: 'Impact', sans-serif; 
 }
-nav{
+
+nav {
     height: 50vh;
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height:20px;
+    height: 20px;
     background-color: rgb(226, 43, 119);
 }
-nav a{
-    width:10vw;
+
+nav a {
+    width: 10vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
-
-img{
-    width:30vw;
+img {
+    width: 30vw;
     height: 30vh;
+    transition: transform 0.8s ease-in-out;
 }
 
-#red-ball{
+img:hover {
+    transform: rotate(360deg);
+}
+
+#red-ball {
     background-color: rgb(47, 215, 245);
     width: 20px;
-    height:20px;
+    height: 20px;
     border-radius: 50%;
     position: absolute;
-    left:5vw;
-    top:0;
+    left: 5vw;
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+#red-ball:hover {
+    transform: translateX(100px);
+}
+
+h1 {
+    font-family: 'Impact', sans-serif; 
 }
