@@ -10,10 +10,6 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid #d9534f; /* Red outline */
 }
 
 header {
@@ -29,10 +25,14 @@ header h1 {
 section {
     margin-bottom: 40px;
     padding: 20px;
+    background-color: #fff; 
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid #d9534f; 
+    border: 2px solid #d9534f;
     transition: transform 0.3s ease; 
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto; 
 }
 
 section:hover {
@@ -117,4 +117,5 @@ a:visited {
         margin-bottom: 10px;
     }
 }
+
 
