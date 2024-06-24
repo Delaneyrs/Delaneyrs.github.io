@@ -22,18 +22,27 @@ header h1 {
     margin: 10px 0;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 section {
     margin-bottom: 40px;
     background-color: #fff; 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: 2px solid #cc0000; 
+    border: 2px solid #d9534f; 
+    transition: transform 0.3s ease; 
+}
+
+section:hover {
+    transform: scale(1.05); 
+}
+
+a {
+    color: #d9534f; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: #690404; 
 }
 
 .introduction {
@@ -76,15 +85,6 @@ section {
     list-style: none;
 }
 
-.featured-artists a {
-    color: #cc0000; 
-    text-decoration: none;
-}
-
-.featured-artists a:visited {
-    color: #666; 
-}
-
 .repertoire {
     padding: 10px;
     margin-top: 20px;
@@ -114,5 +114,3 @@ section {
         margin-bottom: 10px;
     }
 }
-
-
