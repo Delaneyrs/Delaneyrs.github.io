@@ -1,5 +1,3 @@
-
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -24,12 +22,18 @@ header h1 {
     margin: 10px 0;
 }
 
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 section {
     margin-bottom: 40px;
     background-color: #fff; 
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 2px solid #cc0000; 
 }
 
 .introduction {
@@ -72,6 +76,15 @@ section {
     list-style: none;
 }
 
+.featured-artists a {
+    color: #cc0000; 
+    text-decoration: none;
+}
+
+.featured-artists a:visited {
+    color: #666; 
+}
+
 .repertoire {
     padding: 10px;
     margin-top: 20px;
@@ -95,11 +108,11 @@ section {
     color: #3f3d35; 
 }
 
-
 @media (max-width: 600px) {
     .concert-info img {
         flex-basis: 100%;
         margin-bottom: 10px;
     }
 }
+
 
