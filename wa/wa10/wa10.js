@@ -8,7 +8,7 @@ function randomValueFromArray(array){
   return array[random];
 }
 
-const storyText = 'Once upon a time there was a person named :insertx:. Now, today they were on a mission. A mission to go to :inserty:. However, just as they finished their very important task they :insertz:. Bob just watched on in horror. They were a big fan of :insertx:. Now theyll never get that autograph.';
+const storyText = 'Once upon a time there was a person named :insertx:. Now, today they were on a mission. A mission to go to :inserty:. However, just as they finished their very important task they :insertz:. Bob watched in horror :insertx: was their idol. Now theyll never get that autograph.';
 const insertX = [
   'Hatsune Miku',
   'Jerma',
