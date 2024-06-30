@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery Example</title>
   <style>
-   
+    /* Your CSS styles here */
     .full-img {
       position: relative;
       margin-bottom: 20px;
@@ -28,7 +28,7 @@
       width: 20%;
       float: left;
       cursor: pointer;
-      opacity: 0.6;
+      opacity: 0.6; 
       transition: opacity 0.3s ease-in-out;
     }
     .thumb-bar img:hover {
@@ -73,21 +73,27 @@
         newImage.addEventListener('click', function() {
           displayedImg.src = this.src;
           displayedImg.alt = this.alt;
-        });
-      });
+        }
+    );
+      }
+    );
 
       btn.addEventListener('click', function() {
-        if (btn.getAttribute('class') === 'dark') {
-          btn.setAttribute('class', 'light');
+        if (btn.classList.contains('dark')) {
+          btn.classList.remove('dark');
+          btn.classList.add('light');
           btn.textContent = 'Lighten';
           overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
         } else {
-          btn.setAttribute('class', 'dark');
+          btn.classList.remove('light');
+          btn.classList.add('dark');
           btn.textContent = 'Darken';
           overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         }
-      });
-    });
+      }
+    );
+    }
+);
   </script>
 </body>
 </html>
