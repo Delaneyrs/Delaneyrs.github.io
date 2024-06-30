@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery Example</title>
   <style>
-    
+   
     .full-img {
       position: relative;
       margin-bottom: 20px;
@@ -67,17 +66,15 @@
 
       imageFilenames.forEach(filename => {
         const newImage = document.createElement('img');
-        newImage.src = `images/${filename}`;
+        newImage.src = filename; 
         newImage.alt = altTexts[filename];
         thumbBar.appendChild(newImage);
 
         newImage.addEventListener('click', function() {
           displayedImg.src = this.src;
           displayedImg.alt = this.alt;
-        }
-    );
-      }
-    );
+        });
+      });
 
       btn.addEventListener('click', function() {
         if (btn.getAttribute('class') === 'dark') {
@@ -89,10 +86,8 @@
           btn.textContent = 'Darken';
           overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         }
-      }
-    );
-    }
-);
+      });
+    });
   </script>
 </body>
 </html>
