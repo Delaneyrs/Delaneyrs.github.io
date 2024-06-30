@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const newQuoteButton = document.querySelector('#js-new-quote');
+    const answerButton = document.querySelector('#js-tweet');
+    const quoteTextElement = document.querySelector('#js-quote-text');
+    const answerTextElement = document.querySelector('#js-answer-text');
     const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
-
+    
     newQuoteButton.addEventListener('click', getQuote);
+    answerButton.addEventListener('click', showAnswer);
 
     function getQuote() {
         fetch(endpoint)
@@ -14,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         )
             .then(data => {
+                localStorage.setItem('christmasTrivia', JSON.stringify(data.question));
                 displayQuote(data.question);
             }
         )
@@ -25,9 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayQuote(quote) {
-        const quoteTextElement = document.querySelector('#js-quote-text');
         quoteTextElement.textContent = quote;
+    }
+
+    function showAnswer() {
+        const storedTrivia = localStorage.getItem('christmasTrivia');
+        if (storedTrivia) {
+            answerTextElement.textContent = storedTrivia;
+        } else {
+            answerTextElement.textContent = 'No trivia question retrieved yet.';
+        }
     }
 }
 );
+
 
