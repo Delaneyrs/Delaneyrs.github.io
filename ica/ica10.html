@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICA 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #changeColorButton, #changeFontButton {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="changeColorButton">Change background color</button>
+    <button id="changeFontButton">Change font</button>
+    
+    <p>This text can change, how cool, pop off text.</p>
+    
+    <script>
+         document.getElementById('changeColorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = document.body.style.backgroundColor === 'teal' ? 'white' : 'teal';
+        }
+    );
+
+        document.getElementById('changeFontButton').addEventListener('click', function() {
+            document.body.style.fontFamily = document.body.style.fontFamily === 'Arial, sans-serif' ? 'Courier New, monospace' : 'Arial, sans-serif';
+        }
+    );
+    </script>
+</body>
+</html>
 
