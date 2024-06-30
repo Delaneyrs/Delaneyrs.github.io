@@ -3,78 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Function start</title>
+  <title>Custom Message Box</title>
   <style>
     .msgBox {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      width: 242px; /* Adjusted width to accommodate icons */
+      width: 242px; 
       background: #eee;
-      text-align: center; /* Center align text */
-      padding: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add box shadow for effect */
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      display: none; 
     }
 
     .msgBox p {
       line-height: 1.5;
-      padding-left: 82px; /* Adjusted padding for icon */
-      background-position: 25px center; /* Position background image */
-      background-repeat: no-repeat; /* Prevent repeating background */
       color: #333;
+      padding-left: 82px; 
+      background-position: 25px center; 
+      background-repeat: no-repeat;
     }
 
     .msgBox button {
       background: none;
       border: none;
-      position: absolute;
-      top: 5px;
-      right: 10px;
       font-size: 1.1rem;
       color: #aaa;
       cursor: pointer;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <button id="displayBtn">Display message box</button>
 
-  <script>
-    function displayMessage(msgText, msgType) {
-      const body = document.body;
+  <div id="messageBox" class="msgBox">
+    <p id="messageText">This is a message box</p>
+    <button id="closeBtn">x</button>
+  </div>
 
-      const panel = document.createElement("div");
-      panel.setAttribute("class", "msgBox");
-      
-      const msg = document.createElement("p");
-      msg.textContent = msgText;
-      
-      if (msgType === "warning") {
-        msg.style.backgroundImage = "url(icons/warning.png)";
-        panel.style.backgroundColor = "red";
-      } else if (msgType === "chat") {
-        msg.style.backgroundImage = "url(icons/chat.png)";
-        panel.style.backgroundColor = "aqua";
-      } else {
-        msg.style.paddingLeft = "20px"; 
-      }
-      const closeBtn = document.createElement("button");
-      closeBtn.textContent = "x";
-      closeBtn.addEventListener("click", function() {
-        body.removeChild(panel); 
-      }
-    );
-      panel.appendChild(msg);
-      panel.appendChild(closeBtn);
-      body.appendChild(panel);
-    }
-    const displayBtn = document.getElementById("displayBtn");
-    displayBtn.addEventListener("click", function() {
-        displayMessage("Your inbox is almost full — delete some mails", "warning");
-    }
-);
-  </script>
+  <script src="wa11.js"></script>
 </body>
 </html>
+
 
