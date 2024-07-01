@@ -11,28 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function getQuote() {
         loadingElement.style.display = 'block';
-        fetch(endpoint, {
-            headers: { 'X-Api-Key': apiKey }
-        }
-    )
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch joke');
+        $.ajax({
+            method: 'GET',
+            url: endpoint,
+            headers: { 'X-Api-Key': apiKey },
+            contentType: 'application/json',
+            success: function(result) {
+                const joke = result[0].joke;
+                displayQuote(joke);
+                localStorage.setItem('dadJoke', joke);
+                loadingElement.style.display = 'none';
+            },
+            error: function ajaxError(jqXHR) {
+                console.error('Error: ', jqXHR.responseText);
+                alert('Joke not found :(');
+                loadingElement.style.display = 'none';
             }
-            return response.json();
-        }
-    )
-        .then(data => {
-            const joke = data[0].joke;
-            displayQuote(joke);
-            localStorage.setItem('dadJoke', joke);
-            loadingElement.style.display = 'none';
-        }
-    )
-        .catch(error => {
-            console.error('Error fetching joke:', error);
-            alert('Joke was not found');
-            loadingElement.style.display = 'none';
         }
     );
     }
