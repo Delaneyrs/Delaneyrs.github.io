@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingElement.style.display = 'block';
         $.ajax({
             method: 'GET',
-            url: endpoint,
-            headers: { 'X-Api-Key': apiKey },
+            url: 'https://api.api-ninjas.com/v1/dadjokes?limit=1',
+            headers: { 'X-Api-Key': 'ju4WU4AyFun0PHSRvybsig==cXXTMzudlyu3dQKF' },
             contentType: 'application/json',
             success: function(result) {
                 const joke = result[0].joke;
