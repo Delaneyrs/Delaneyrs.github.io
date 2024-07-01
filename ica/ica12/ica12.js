@@ -4,9 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const quoteTextElement = document.querySelector('#js-quote-text');
     const answerTextElement = document.querySelector('#js-answer-text');
     const endpoint = 'https://trivia.cyberwisp.com/getrandomchristmasquestion';
-    
+
     newQuoteButton.addEventListener('click', getQuote);
     answerButton.addEventListener('click', showAnswer);
+
+    const storedTrivia = localStorage.getItem('christmasTrivia');
+    const storedAnswer = localStorage.getItem('christmasAnswer');
+    if (storedTrivia && storedAnswer) {
+        displayQuote(storedTrivia);
+        displayAnswer(storedAnswer);
+    }
 
     function getQuote() {
         fetch(endpoint)
@@ -18,8 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         )
             .then(data => {
-                localStorage.setItem('christmasTrivia', JSON.stringify(data.question));
+                localStorage.setItem('christmasTrivia', data.question);
+                localStorage.setItem('christmasAnswer', data.answer);
                 displayQuote(data.question);
+                clearAnswer();
             }
         )
             .catch(error => {
@@ -33,15 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
         quoteTextElement.textContent = quote;
     }
 
+    function displayAnswer(answer) {
+        answerTextElement.textContent = answer;
+    }
+
+    function clearAnswer() {
+        answerTextElement.textContent = '';
+    }
+
     function showAnswer() {
-        const storedTrivia = localStorage.getItem('christmasTrivia');
-        if (storedTrivia) {
-            answerTextElement.textContent = storedTrivia;
+        const storedAnswer = localStorage.getItem('christmasAnswer');
+        if (storedAnswer) {
+            displayAnswer(storedAnswer);
         } else {
-            answerTextElement.textContent = 'No trivia question retrieved yet.';
+            answerTextElement.textContent = 'No trivia answer retrieved yet.';
         }
     }
 }
 );
+
 
 
