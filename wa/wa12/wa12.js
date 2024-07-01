@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const tweetButton = document.querySelector('#js-tweet');
     const quoteTextElement = document.querySelector('#js-quote-text');
     const loadingElement = document.querySelector('#loading');
-    const endpoint = 'https://api.api-ninjas.com/v1/dadjokes?limit=1';
-    const apiKey = 'ju4WU4AyFun0PHSRvybsig==cXXTMzudlyu3dQKF'; 
+    const endpoint = 'https://icanhazdadjoke.com/';
+    const userAgent = 'My Dad Jokes App (https://delaneyrs.github.io/wa/wa12/wa12.html)';
 
     newQuoteButton.addEventListener('click', getQuote);
     tweetButton.addEventListener('click', tweetQuote);
@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingElement.style.display = 'block';
         $.ajax({
             method: 'GET',
-            url: 'https://api.api-ninjas.com/v1/dadjokes?limit=1',
-            headers: { 'X-Api-Key': 'ju4WU4AyFun0PHSRvybsig==cXXTMzudlyu3dQKF' },
-            contentType: 'application/json',
+            url: endpoint,
+            headers: {
+                'Accept': 'application/json',
+                'User-Agent': userAgent
+            },
             success: function(result) {
-                const joke = result[0].joke;
+                const joke = result.joke;
                 displayQuote(joke);
                 localStorage.setItem('dadJoke', joke);
                 loadingElement.style.display = 'none';
@@ -41,11 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open(tweetUrl, '_blank');
     }
 
-    
     const storedJoke = localStorage.getItem('dadJoke');
     if (storedJoke) {
         displayQuote(storedJoke);
     }
 }
 );
+
 
