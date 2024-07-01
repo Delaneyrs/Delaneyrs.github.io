@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingElement.style.display = 'block';
         $.ajax({
             method: 'GET',
-            url:'https://icanhazdadjoke.com/',
+            url: endpoint,
             headers: {
                 'Accept': 'application/json',
                 'User-Agent': userAgent
@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (storedJoke) {
         displayQuote(storedJoke);
     }
-}
-);
+});
+
 
 
 
