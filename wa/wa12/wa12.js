@@ -29,8 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Joke not found :(');
                 loadingElement.style.display = 'none';
             }
-        }
-    );
+        });
     }
 
     function displayQuote(quote) {
@@ -49,5 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }
 );
+
 
 
