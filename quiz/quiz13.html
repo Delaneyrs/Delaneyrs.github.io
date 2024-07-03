@@ -20,6 +20,8 @@
 
     <section class="preview">
 
+
+
     </section>
 
   </body>
@@ -29,16 +31,17 @@
     let para1 = document.createElement('p');
     let para2 = document.createElement('p');
     let motherInfo = 'The mother cats are called ';
-    let kittenInfo = '';
+    let kittenInfo;
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json';
 
     fetch(requestURL)
-      .then(response => response.text())
-      .then(text => displayCatInfo(text));
+    .then(response => response.text())
+    .then(text => displayCatInfo(text))
 
     function displayCatInfo(catString) {
       let total = 0;
       let male = 0;
+
       let female = 0;
 
       const cats = JSON.parse(catString);
@@ -52,7 +55,6 @@
         } else {
           motherInfo += '.';
         }
-
         cat.kittens.forEach(kitten => {
           total++;
           if (kitten.gender === 'm') {
@@ -72,5 +74,5 @@
     section.appendChild(para1);
     section.appendChild(para2);
   </script>
-</html>
 
+</html>
