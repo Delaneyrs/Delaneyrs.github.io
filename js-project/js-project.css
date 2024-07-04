@@ -1,1 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: teal;
+}
+.numpad {
+    display: inline-block;
+    margin-top: 20px;
+}
+.num-row {
+    display: flex;
+}
+.num-button {
+    background-color: rgb(151, 35, 107);
+    border: 2px solid teal;
+    color: teal;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+}
+#output {
+    margin-top: 20px;
+    font-size: 24px;
+    color: teal;
+}
 
