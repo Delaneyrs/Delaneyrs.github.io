@@ -9,9 +9,9 @@ buttons.forEach(button => {
 
 function evade(event) {
     const button = event.target;
-    const offset = 60; 
-    const maxMove = 80;
-    const minMove = 20;
+    const offset = 200; 
+    const maxMove = 50;
+    const minMove = 10;
     let moveX = Math.random() * (maxMove - minMove) + minMove;
     let moveY = Math.random() * (maxMove - minMove) + minMove;
     if (Math.random() > 0.5) moveX = -moveX;

@@ -23,6 +23,7 @@ h1 {
     margin: 5px;
     position: relative;
     cursor: pointer;
+    transition: transform 0.3s
 }
 #output {
     margin-top: 20px;
