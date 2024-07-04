@@ -1,7 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: rgb(151, 35, 107);
+    background-color: rgb(214, 179, 201);
+    
 }
 h1 {
     color: teal;
@@ -14,7 +15,7 @@ h1 {
     display: flex;
 }
 .num-button {
-    background-color: rgb(214, 179, 201);
+    background-color: rgb(151, 35, 107);
     border: 2px solid teal;
     color: teal;
     font-size: 24px;
