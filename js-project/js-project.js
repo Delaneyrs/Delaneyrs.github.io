@@ -31,4 +31,11 @@ function enterNumber(event) {
     phoneNumber += button.textContent;
     output.textContent = phoneNumber;
 }
+function enterNumber(event) {
+    if (phoneNumber.length < 10) {
+        const button = event.target;
+        phoneNumber += button.textContent;
+        output.textContent = phoneNumber;
+    }
+}
 
